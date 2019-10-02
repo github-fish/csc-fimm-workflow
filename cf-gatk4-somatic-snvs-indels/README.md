@@ -1,0 +1,2 @@
+This repository stores Introduction and Workflows for Somatic short variant discovery (SNVs + Indels) with GATK4 on CSC cPouta VM.
+This document offering the step-by-step introduction about calling somatic short variants with GATK4.1.2.0 Docker images, oncotator:1.9.9.0 Docker images (if needed) and Cromwell version 36 on CSC cPouta VM. See [Here](https://github.com/github-fish/csc-gatk4-somatic-workflows).
