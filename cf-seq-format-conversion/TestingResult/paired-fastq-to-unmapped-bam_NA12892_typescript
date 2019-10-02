@@ -1,0 +1,253 @@
+Script started on Tue Nov 20 11:45:39 2018
+kcloud-user@t:/media/volume/seq-format-conversion\[cloud-user@t seq-format-conversion]$ time java -jar /media/volume/cromwell-33.1.jar run /media/volume/seq-format-conversion/seq-format-conveersion/paired-fastq-to-unmapped-bam.wdl -i /media/volume/seq-format-conversion/seq-format-conversion/paired-fastq-to-unmapped-bam.inputs.NA122892.json 
+[2018-11-20 11:47:14,79] [info] Running with database db.url = jdbc:hsqldb:mem:c84a2de0-9221-4196-ba7b-55233f22f91f;shutdown=false;hsqldb.tx=mvcc
+[2018-11-20 11:47:30,52] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+[2018-11-20 11:47:30,54] [info] [RenameWorkflowOptionsInMetadata] 100%
+[2018-11-20 11:47:30,68] [info] Running with database db.url = jdbc:hsqldb:mem:2888beab-a086-46eb-8fbc-31e1119f108b;shutdown=false;hsqldb.tx=mvcc
+[2018-11-20 11:47:31,15] [info] Slf4jLogger started
+[2018-11-20 11:47:31,54] [info] Workflow heartbeat configuration:
+{
+  "cromwellId" : "cromid-5c32552",
+  "heartbeatInterval" : "2 minutes",
+  "ttl" : "10 minutes",
+  "writeBatchSize" : 10000,
+  "writeThreshold" : 10000
+}
+[2018-11-20 11:47:31,61] [info] Metadata summary refreshing every 2 seconds.
+[2018-11-20 11:47:31,67] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
+[2018-11-20 11:47:31,67] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
+[2018-11-20 11:47:31,68] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
+[2018-11-20 11:47:32,64] [info] JobExecutionTokenDispenser - Distribution rate: 50 per 1 seconds.
+[2018-11-20 11:47:32,66] [info] SingleWorkflowRunnerActor: Submitting workflow
+[2018-11-20 11:47:32,73] [info] Unspecified type (Unspecified version) workflow b7b55053-65ec-450e-bf86-df1e81e6096b submitted
+[2018-11-20 11:47:32,79] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2mb7b55053-65ec-450e-bf86-df1e81e6096b[0m
+[2018-11-20 11:47:32,79] [info] 1 new workflows fetched
+[2018-11-20 11:47:32,80] [info] WorkflowManagerActor Starting workflow [38;5;2mb7b55053-65ec-450e-bf86-df1e81e6096b[0m
+[2018-11-20 11:47:32,80] [info] WorkflowManagerActor Successfully started WorkflowActor-b7b55053-65ec-450e-bf86-df1e81e6096b
+[2018-11-20 11:47:32,81] [info] Retrieved 1 workflows from the WorkflowStoreActor
+[2018-11-20 11:47:32,81] [[38;5;220mwarn[0m] SingleWorkflowRunnerActor: received unexpected message: Done in state RunningSwraData
+[2018-11-20 11:47:32,85] [[38;5;220mwarn[0m] Couldn't find a suitable DSN, defaulting to a Noop one.
+[2018-11-20 11:47:32,86] [info] Using noop to send events.
+[2018-11-20 11:47:32,89] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
+[2018-11-20 11:47:32,91] [info] MaterializeWorkflowDescriptorActor [[38;5;2mb7b55053[0m]: Parsing workflow as WDL draft-2
+[2018-11-20 11:47:33,99] [info] MaterializeWorkflowDescriptorActor [[38;5;2mb7b55053[0m]: Call-to-Backend assignments: ConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM -> Local, ConvertPairedFastQsToUnmappedBamWf.CreateFoFN -> Local
+[2018-11-20 11:47:34,13] [[38;5;220mwarn[0m] Local [[38;5;2mb7b55053[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2018-11-20 11:47:34,13] [[38;5;220mwarn[0m] Local [[38;5;2mb7b55053[0m]: Key/s [preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2018-11-20 11:47:38,65] [info] WorkflowExecutionActor-b7b55053-65ec-450e-bf86-df1e81e6096b [[38;5;2mb7b55053[0m]: Starting ConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM (4 shards)
+[2018-11-20 11:47:40,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Unrecognized runtime attribute keys: preemptible, disks, cpu, memory
+[2018-11-20 11:47:40,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: Unrecognized runtime attribute keys: preemptible, disks, cpu, memory
+[2018-11-20 11:47:40,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: Unrecognized runtime attribute keys: preemptible, disks, cpu, memory
+[2018-11-20 11:47:40,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: Unrecognized runtime attribute keys: preemptible, disks, cpu, memory
+[2018-11-20 11:47:41,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: [38;5;5m/gatk/gatk --java-options "-Xmx3000m" \
+FastqToSam \
+--FASTQ /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/inputs/1327593529/ERR194161_D0UYCACXX.5_1.fastq.gz \
+--FASTQ2 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/inputs/1327593529/ERR194161_D0UYCACXX.5_2.fastq.gz \
+--OUTPUT ERR194161_D0UYCACXX.5.unmapped.bam \
+--READ_GROUP_NAME ERR194161_D0UYCACXX.5 \
+--SAMPLE_NAME NA12892 \
+--LIBRARY_NAME ERR194161 \
+--PLATFORM_UNIT HSQ1008:176 \
+--RUN_DATE 2018-11-20T09:00:20+00:00 \
+--PLATFORM illumina \
+--SEQUENCING_CENTER CSC[0m
+[2018-11-20 11:47:41,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: [38;5;5m/gatk/gatk --java-options "-Xmx3000m" \
+FastqToSam \
+--FASTQ /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/inputs/1327593529/ERR194161_D0UYCACXX.4_1.fastq.gz \
+--FASTQ2 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/inputs/1327593529/ERR194161_D0UYCACXX.4_2.fastq.gz \
+--OUTPUT ERR194161_D0UYCACXX.4.unmapped.bam \
+--READ_GROUP_NAME ERR194161_D0UYCACXX.4 \
+--SAMPLE_NAME NA12892 \
+--LIBRARY_NAME ERR194161 \
+--PLATFORM_UNIT HSQ1008:176 \
+--RUN_DATE 2018-11-20T09:00:20+00:00 \
+--PLATFORM illumina \
+--SEQUENCING_CENTER CSC[0m
+[2018-11-20 11:47:41,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: [38;5;5m/gatk/gatk --java-options "-Xmx3000m" \
+FastqToSam \
+--FASTQ /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/inputs/1327593529/ERR194161_D0UYCACXX.6_1.fastq.gz \
+--FASTQ2 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/inputs/1327593529/ERR194161_D0UYCACXX.6_2.fastq.gz \
+--OUTPUT ERR194161_D0UYCACXX.6.unmapped.bam \
+--READ_GROUP_NAME ERR194161_D0UYCACXX.6 \
+--SAMPLE_NAME NA12892 \
+--LIBRARY_NAME ERR194161 \
+--PLATFORM_UNIT HSQ1008:176 \
+--RUN_DATE 2018-11-20T09:00:20+00:00 \
+--PLATFORM illumina \
+--SEQUENCING_CENTER CSC[0m
+[2018-11-20 11:47:41,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: [38;5;5m/gatk/gatk --java-options "-Xmx3000m" \
+FastqToSam \
+--FASTQ /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/inputs/1327593529/ERR194161_D0UYCACXX.7_1.fastq.gz \
+--FASTQ2 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/inputs/1327593529/ERR194161_D0UYCACXX.7_2.fastq.gz \
+--OUTPUT ERR194161_D0UYCACXX.7.unmapped.bam \
+--READ_GROUP_NAME ERR194161_D0UYCACXX.7 \
+--SAMPLE_NAME NA12892 \
+--LIBRARY_NAME ERR194161 \
+--PLATFORM_UNIT HSQ1008:176 \
+--RUN_DATE 2018-11-20T09:00:20+00:00 \
+--PLATFORM illumina \
+--SEQUENCING_CENTER CSC[0m
+[2018-11-20 11:47:41,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0 \
+  broadinstitute/gatk@sha256:84f9b2c633ffb42f41bf41dbfe07a81a7ba2e54fc3c57c5e82a21a994c069208 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-20 11:47:41,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2 \
+  broadinstitute/gatk@sha256:84f9b2c633ffb42f41bf41dbfe07a81a7ba2e54fc3c57c5e82a21a994c069208 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-20 11:47:41,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3 \
+  broadinstitute/gatk@sha256:84f9b2c633ffb42f41bf41dbfe07a81a7ba2e54fc3c57c5e82a21a994c069208 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-20 11:47:41,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1 \
+  broadinstitute/gatk@sha256:84f9b2c633ffb42f41bf41dbfe07a81a7ba2e54fc3c57c5e82a21a994c069208 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-20 11:47:41,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: job id: 13184
+[2018-11-20 11:47:41,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: job id: 13185
+[2018-11-20 11:47:41,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: job id: 13186
+[2018-11-20 11:47:41,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: job id: 13183
+[2018-11-20 11:47:41,73] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-20 11:47:41,73] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-20 11:47:41,73] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-20 11:47:41,73] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-20 13:10:51,41] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:1:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-20 13:11:08,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:2:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-20 13:11:30,90] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:3:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-20 13:16:31,06] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-20 13:16:33,35] [info] WorkflowExecutionActor-b7b55053-65ec-450e-bf86-df1e81e6096b [[38;5;2mb7b55053[0m]: Starting ConvertPairedFastQsToUnmappedBamWf.CreateFoFN
+[2018-11-20 13:16:33,67] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: Unrecognized runtime attribute keys: preemptible
+[2018-11-20 13:16:33,81] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: [38;5;5mmv /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/write_lines_9f3911140255d25963dfd29cda44c6bf.tmp  NA12892_unmapped_bam.list[0m
+[2018-11-20 13:16:33,82] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN \
+  broadinstitute/gatk@sha256:84f9b2c633ffb42f41bf41dbfe07a81a7ba2e54fc3c57c5e82a21a994c069208 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-20 13:16:36,69] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: job id: 17792
+[2018-11-20 13:16:36,70] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb7b55053[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: Status change from - to Done
+[2018-11-20 13:16:38,57] [info] WorkflowExecutionActor-b7b55053-65ec-450e-bf86-df1e81e6096b [[38;5;2mb7b55053[0m]: Workflow ConvertPairedFastQsToUnmappedBamWf complete. Final Outputs:
+{
+  "ConvertPairedFastQsToUnmappedBamWf.unmapped_bam_list": "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/NA12892_unmapped_bam.list",
+  "ConvertPairedFastQsToUnmappedBamWf.output_bams": ["/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/ERR194161_D0UYCACXX.4.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/ERR194161_D0UYCACXX.5.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/ERR194161_D0UYCACXX.6.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/ERR194161_D0UYCACXX.7.unmapped.bam"]
+}
+[2018-11-20 13:16:38,69] [info] WorkflowManagerActor WorkflowActor-b7b55053-65ec-450e-bf86-df1e81e6096b is in a terminal state: WorkflowSucceededState
+[2018-11-20 13:17:18,60] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
+{
+  "outputs": {
+    "ConvertPairedFastQsToUnmappedBamWf.unmapped_bam_list": "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-CreateFoFN/execution/NA12892_unmapped_bam.list",
+    "ConvertPairedFastQsToUnmappedBamWf.output_bams": ["/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-0/execution/ERR194161_D0UYCACXX.4.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-1/execution/ERR194161_D0UYCACXX.5.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-2/execution/ERR194161_D0UYCACXX.6.unmapped.bam", "/media/volume/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/b7b55053-65ec-450e-bf86-df1e81e6096b/call-PairedFastQsToUnmappedBAM/shard-3/execution/ERR194161_D0UYCACXX.7.unmapped.bam"]
+  },
+  "id": "b7b55053-65ec-450e-bf86-df1e81e6096b"
+}
+[2018-11-20 13:17:21,99] [info] Workflow polling stopped
+[2018-11-20 13:17:22,01] [info] Shutting down WorkflowStoreActor - Timeout = 5 seconds
+[2018-11-20 13:17:22,03] [info] Shutting down WorkflowLogCopyRouter - Timeout = 5 seconds
+[2018-11-20 13:17:22,23] [info] Shutting down JobExecutionTokenDispenser - Timeout = 5 seconds
+[2018-11-20 13:17:22,24] [info] Aborting all running workflows.
+[2018-11-20 13:17:22,29] [info] JobExecutionTokenDispenser stopped
+[2018-11-20 13:17:22,29] [info] WorkflowStoreActor stopped
+[2018-11-20 13:17:22,40] [info] WorkflowLogCopyRouter stopped
+[2018-11-20 13:17:22,40] [info] Shutting down WorkflowManagerActor - Timeout = 3600 seconds
+[2018-11-20 13:17:22,40] [info] WorkflowManagerActor All workflows finished
+[2018-11-20 13:17:22,40] [info] WorkflowManagerActor stopped
+[2018-11-20 13:17:22,40] [info] Connection pools shut down
+[2018-11-20 13:17:22,40] [info] Shutting down SubWorkflowStoreActor - Timeout = 1800 seconds
+[2018-11-20 13:17:22,40] [info] Shutting down JobStoreActor - Timeout = 1800 seconds
+[2018-11-20 13:17:22,40] [info] Shutting down CallCacheWriteActor - Timeout = 1800 seconds
+[2018-11-20 13:17:22,40] [info] SubWorkflowStoreActor stopped
+[2018-11-20 13:17:22,40] [info] Shutting down ServiceRegistryActor - Timeout = 1800 seconds
+[2018-11-20 13:17:22,40] [info] Shutting down DockerHashActor - Timeout = 1800 seconds
+[2018-11-20 13:17:22,41] [info] Shutting down IoProxy - Timeout = 1800 seconds
+[2018-11-20 13:17:22,41] [info] CallCacheWriteActor Shutting down: 0 queued messages to process
+[2018-11-20 13:17:22,41] [info] WriteMetadataActor Shutting down: 0 queued messages to process
+[2018-11-20 13:17:22,41] [info] KvWriteActor Shutting down: 0 queued messages to process
+[2018-11-20 13:17:22,41] [info] CallCacheWriteActor stopped
+[2018-11-20 13:17:22,42] [info] ServiceRegistryActor stopped
+[2018-11-20 13:17:22,56] [info] JobStoreActor stopped
+[2018-11-20 13:17:22,56] [info] DockerHashActor stopped
+[2018-11-20 13:17:22,57] [info] IoProxy stopped
+[2018-11-20 13:17:22,59] [info] Database closed
+[2018-11-20 13:17:22,59] [info] Stream materializer shut down
+[2018-11-20 13:17:22,65] [info] Automatic shutdown of the async connection
+[2018-11-20 13:17:22,65] [info] Gracefully shutdown sentry threads.
+[2018-11-20 13:17:22,65] [info] Shutdown finished.
+
+real	90m21.144s
+user	1m49.312s
+sys	0m19.364s
+kcloud-user@t:/media/volume/seq-format-conversion\[cloud-user@t seq-format-conversion]$ [K[cloud-user@t seq-format-conversion]$ exit
+
+Script done on Tue Nov 20 15:58:01 2018
