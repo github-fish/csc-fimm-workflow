@@ -1,0 +1,1721 @@
+Script started on Sun Nov 18 22:36:27 2018
+kroot@t:/media/volume/g-snps-indels\[root@t g-snps-indels]# tie[Kme java -jar /,[Kmedia/volume/v[Kcromwell-33.1.jar run /media/volume/g-snps-indels/haplotypecaller-gvcf-gatk4.wdl -i /media/volume/g-snps-indels/haplotypeccaller-gvcf-gatk4.hg38.wgs.inputs.NA12891.json 
+[2018-11-18 22:37:30,48] [info] Running with database db.url = jdbc:hsqldb:mem:31cffb68-5f66-4360-93a6-d7ad213b2586;shutdown=false;hsqldb.tx=mvcc
+[2018-11-18 22:37:43,92] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+[2018-11-18 22:37:43,94] [info] [RenameWorkflowOptionsInMetadata] 100%
+[2018-11-18 22:37:44,06] [info] Running with database db.url = jdbc:hsqldb:mem:62bd9a99-0adf-4370-9273-4b959d86d4ec;shutdown=false;hsqldb.tx=mvcc
+[2018-11-18 22:37:44,57] [info] Slf4jLogger started
+[2018-11-18 22:37:44,89] [info] Workflow heartbeat configuration:
+{
+  "cromwellId" : "cromid-21e7bff",
+  "heartbeatInterval" : "2 minutes",
+  "ttl" : "10 minutes",
+  "writeBatchSize" : 10000,
+  "writeThreshold" : 10000
+}
+[2018-11-18 22:37:44,96] [info] Metadata summary refreshing every 2 seconds.
+[2018-11-18 22:37:45,01] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
+[2018-11-18 22:37:45,01] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
+[2018-11-18 22:37:45,01] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
+[2018-11-18 22:37:46,06] [info] JobExecutionTokenDispenser - Distribution rate: 50 per 1 seconds.
+[2018-11-18 22:37:46,08] [info] SingleWorkflowRunnerActor: Submitting workflow
+[2018-11-18 22:37:46,14] [info] Unspecified type (Unspecified version) workflow 73dba41c-9c73-439a-ac4e-e2272cb25a03 submitted
+[2018-11-18 22:37:46,19] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2m73dba41c-9c73-439a-ac4e-e2272cb25a03[0m
+[2018-11-18 22:37:46,20] [info] 1 new workflows fetched
+[2018-11-18 22:37:46,20] [info] WorkflowManagerActor Starting workflow [38;5;2m73dba41c-9c73-439a-ac4e-e2272cb25a03[0m
+[2018-11-18 22:37:46,21] [info] WorkflowManagerActor Successfully started WorkflowActor-73dba41c-9c73-439a-ac4e-e2272cb25a03
+[2018-11-18 22:37:46,21] [info] Retrieved 1 workflows from the WorkflowStoreActor
+[2018-11-18 22:37:46,22] [[38;5;220mwarn[0m] SingleWorkflowRunnerActor: received unexpected message: Done in state RunningSwraData
+[2018-11-18 22:37:46,24] [[38;5;220mwarn[0m] Couldn't find a suitable DSN, defaulting to a Noop one.
+[2018-11-18 22:37:46,25] [info] Using noop to send events.
+[2018-11-18 22:37:46,28] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
+[2018-11-18 22:37:46,30] [info] MaterializeWorkflowDescriptorActor [[38;5;2m73dba41c[0m]: Parsing workflow as WDL draft-2
+[2018-11-18 22:37:47,59] [info] MaterializeWorkflowDescriptorActor [[38;5;2m73dba41c[0m]: Call-to-Backend assignments: HaplotypeCallerGvcf_GATK4.MergeGVCFs -> Local, HaplotypeCallerGvcf_GATK4.HaplotypeCaller -> Local, HaplotypeCallerGvcf_GATK4.CramToBamTask -> Local
+[2018-11-18 22:37:47,73] [[38;5;220mwarn[0m] Local [[38;5;2m73dba41c[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2018-11-18 22:37:47,73] [[38;5;220mwarn[0m] Local [[38;5;2m73dba41c[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2018-11-18 22:37:47,73] [[38;5;220mwarn[0m] Local [[38;5;2m73dba41c[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2018-11-18 22:37:51,23] [info] WorkflowExecutionActor-73dba41c-9c73-439a-ac4e-e2272cb25a03 [[38;5;2m73dba41c[0m]: Condition NOT met: 'is_cram'. Bypassing conditional section
+[2018-11-18 22:37:55,56] [info] WorkflowExecutionActor-73dba41c-9c73-439a-ac4e-e2272cb25a03 [[38;5;2m73dba41c[0m]: Starting HaplotypeCallerGvcf_GATK4.HaplotypeCaller (50 shards)
+[2018-11-18 22:37:57,31] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,32] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,32] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,32] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,33] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,33] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,33] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,33] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,33] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,34] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,34] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,34] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,35] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,36] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,37] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,38] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,39] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,39] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,39] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,39] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-18 22:37:57,85] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0030_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,85] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0037_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,85] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0003_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0049_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0023_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0035_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0020_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0015_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0042_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0048_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0046_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0006_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0033_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0027_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0044_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0043_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0021_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0024_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0010_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,86] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0016_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0034_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0019_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0022_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0028_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0040_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0047_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0045_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0036_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0008_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0011_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0031_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0009_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0007_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0001_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0018_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0005_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0013_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0029_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0026_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0050_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0004_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0017_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0041_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0032_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0012_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0039_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0014_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0038_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0002_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx6G -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    HaplotypeCaller \
+    -R /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/inputs/1607901405/hg38_v0_Homo_sapiens_assembly38.fasta \
+    -I /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/inputs/1607901405/NA12891.hg38.bam \
+    -L /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/inputs/-909634010/resources_broad_hg38_v0_scattered_calling_intervals_temp_0025_of_50_scattered.interval_list \
+    -O NA12891.hg38.g.vcf.gz \
+    -contamination 0 -ERC GVCF[0m
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-17/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-28/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-48/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-8/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-37/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-49/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-30/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-6/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-42/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-41/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-18/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-19/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-11/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-16/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-21/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-34/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-45/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,95] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-32/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-22/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-15/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-5/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-23/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-10/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-47/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-33/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-13/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-9/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-14/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-3/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-4/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-38/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-20/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-35/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-12/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-25/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-39/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-40/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-26/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-44/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-0/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-1/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-46/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-31/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-2/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-36/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-43/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-29/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-7/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-24/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:37:57,97] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27 \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-HaplotypeCaller/shard-27/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-18 22:38:00,14] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: job id: 31760
+[2018-11-18 22:38:00,14] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: job id: 32002
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: job id: 31746
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: job id: 31733
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: job id: 31738
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: job id: 31867
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: job id: 31723
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: job id: 31739
+[2018-11-18 22:38:00,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: job id: 31736
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: job id: 31730
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: job id: 31725
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: job id: 32014
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: job id: 31724
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: job id: 31979
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: job id: 32010
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: job id: 32011
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: job id: 32057
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: job id: 31751
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: job id: 32009
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: job id: 32017
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: job id: 32043
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: job id: 32025
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: job id: 31743
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: job id: 32003
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: job id: 32032
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: job id: 32232
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: job id: 32142
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: job id: 32140
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: job id: 31737
+[2018-11-18 22:38:00,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: job id: 32243
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: job id: 32143
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: job id: 32292
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: job id: 32149
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: job id: 32223
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: job id: 31749
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: job id: 31722
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: job id: 32141
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: job id: 31735
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: job id: 31734
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: job id: 32036
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: job id: 31985
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: job id: 32145
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: job id: 32233
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: job id: 32251
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: job id: 32153
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: job id: 32156
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: job id: 31980
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: job id: 31727
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: job id: 32244
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: job id: 32024
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,18] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,20] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-18 22:38:00,20] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-19 00:01:52,53] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:48:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:03:57,49] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:49:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:16:50,59] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:24:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:21:14,51] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:33:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:22:02,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:16:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:27:43,36] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:19:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:28:58,76] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:1:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:29:19,14] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:31:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:29:36,38] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:22:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:31:34,63] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:13:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:33:52,89] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:10:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:34:09,66] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:35:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:34:21,07] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:27:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:34:24,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:6:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:34:52,02] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:4:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:35:18,98] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:25:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:35:33,66] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:7:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:36:49,10] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:38:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:37:25,30] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:8:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:39:14,85] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:37:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:39:27,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:17:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:42:01,50] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:11:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:42:03,43] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:20:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:43:03,53] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:3:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:44:34,54] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:21:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:44:53,17] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:36:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:45:44,72] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:0:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:48:59,88] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:32:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:49:17,50] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:30:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:49:28,16] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:39:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:51:08,78] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:18:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:51:18,02] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:44:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:52:57,56] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:43:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:53:08,20] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:34:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:53:09,19] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:41:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:55:24,77] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:9:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:55:48,55] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:26:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:56:32,22] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:15:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 01:59:27,00] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:23:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:00:29,13] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:14:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:03:43,78] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:47:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:03:48,99] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:12:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:05:03,00] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:28:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:10:06,66] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:42:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:14:18,35] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:5:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:17:35,58] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:46:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:33:16,15] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:29:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:51:45,56] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:45:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 02:54:41,44] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:40:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 03:02:12,29] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.HaplotypeCaller:2:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 03:02:15,21] [info] WorkflowExecutionActor-73dba41c-9c73-439a-ac4e-e2272cb25a03 [[38;5;2m73dba41c[0m]: Starting HaplotypeCallerGvcf_GATK4.MergeGVCFs
+[2018-11-19 03:02:16,40] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2018-11-19 03:02:16,70] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: [38;5;5mset -e
+
+  /gatk/gatk --java-options "-Xmx2G"  \
+    MergeVcfs \
+    --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1579987845/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/918028092/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-878923267/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1619092670/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-177858689/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1974810048/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/523205889/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1273745470/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1224270467/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-572680892/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1384574234/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1113441703/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-683509656/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1814506281/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/17554922/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1779396437/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/718619500/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1078331859/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1419684078/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-377267281/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1255491515/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1242524422/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-554426937/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1943589000/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/146637641/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1650313718/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/847702219/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-949249140/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1548766797/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-248184562/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1126408796/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1371607141/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-425344218/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/2072671719/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/275720360/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1521230999/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/976784938/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-820166421/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1677849516/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-119101843/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-997326077/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1500689860/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-296261499/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-2093212858/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/404803079/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-1392148280/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1105867657/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/-691083702/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/1806932235/NA12891.hg38.g.vcf.gz --INPUT /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/inputs/9980876/NA12891.hg38.g.vcf.gz \
+    --OUTPUT NA12891.hg38.g.vcf.gz[0m
+[2018-11-19 03:02:16,76] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs:/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs \
+  broadinstitute/gatk@sha256:a856882a27604d89de0a80bfe84a703f38a91338e1b6d05efe9a398b10c065c3 /cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2018-11-19 03:02:20,08] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: job id: 9144
+[2018-11-19 03:02:20,08] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: Status change from - to WaitingForReturnCodeFile
+[2018-11-19 03:12:10,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m73dba41c[0mHaplotypeCallerGvcf_GATK4.MergeGVCFs:NA:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-11-19 03:12:12,16] [info] WorkflowExecutionActor-73dba41c-9c73-439a-ac4e-e2272cb25a03 [[38;5;2m73dba41c[0m]: Workflow HaplotypeCallerGvcf_GATK4 complete. Final Outputs:
+{
+  "HaplotypeCallerGvcf_GATK4.output_vcf_index": "/media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/NA12891.hg38.g.vcf.gz.tbi",
+  "HaplotypeCallerGvcf_GATK4.output_vcf": "/media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/NA12891.hg38.g.vcf.gz"
+}
+[2018-11-19 03:12:12,50] [info] WorkflowManagerActor WorkflowActor-73dba41c-9c73-439a-ac4e-e2272cb25a03 is in a terminal state: WorkflowSucceededState
+[2018-11-19 03:13:18,05] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
+{
+  "outputs": {
+    "HaplotypeCallerGvcf_GATK4.output_vcf_index": "/media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/NA12891.hg38.g.vcf.gz.tbi",
+    "HaplotypeCallerGvcf_GATK4.output_vcf": "/media/volume/g-snps-indels/cromwell-executions/HaplotypeCallerGvcf_GATK4/73dba41c-9c73-439a-ac4e-e2272cb25a03/call-MergeGVCFs/execution/NA12891.hg38.g.vcf.gz"
+  },
+  "id": "73dba41c-9c73-439a-ac4e-e2272cb25a03"
+}
+[2018-11-19 03:13:21,23] [info] Workflow polling stopped
+[2018-11-19 03:13:21,34] [info] Shutting down WorkflowStoreActor - Timeout = 5 seconds
+[2018-11-19 03:13:21,34] [info] Shutting down WorkflowLogCopyRouter - Timeout = 5 seconds
+[2018-11-19 03:13:21,37] [info] Shutting down JobExecutionTokenDispenser - Timeout = 5 seconds
+[2018-11-19 03:13:21,39] [info] JobExecutionTokenDispenser stopped
+[2018-11-19 03:13:21,40] [info] Aborting all running workflows.
+[2018-11-19 03:13:21,41] [info] WorkflowStoreActor stopped
+[2018-11-19 03:13:21,41] [info] WorkflowLogCopyRouter stopped
+[2018-11-19 03:13:21,41] [info] Shutting down WorkflowManagerActor - Timeout = 3600 seconds
+[2018-11-19 03:13:21,41] [info] WorkflowManagerActor All workflows finished
+[2018-11-19 03:13:21,41] [info] WorkflowManagerActor stopped
+[2018-11-19 03:13:21,41] [info] Connection pools shut down
+[2018-11-19 03:13:21,41] [info] Shutting down SubWorkflowStoreActor - Timeout = 1800 seconds
+[2018-11-19 03:13:21,41] [info] Shutting down JobStoreActor - Timeout = 1800 seconds
+[2018-11-19 03:13:21,41] [info] Shutting down CallCacheWriteActor - Timeout = 1800 seconds
+[2018-11-19 03:13:21,41] [info] SubWorkflowStoreActor stopped
+[2018-11-19 03:13:21,41] [info] Shutting down ServiceRegistryActor - Timeout = 1800 seconds
+[2018-11-19 03:13:21,41] [info] Shutting down DockerHashActor - Timeout = 1800 seconds
+[2018-11-19 03:13:21,42] [info] Shutting down IoProxy - Timeout = 1800 seconds
+[2018-11-19 03:13:21,50] [info] DockerHashActor stopped
+[2018-11-19 03:13:21,50] [info] IoProxy stopped
+[2018-11-19 03:13:21,50] [info] CallCacheWriteActor Shutting down: 0 queued messages to process
+[2018-11-19 03:13:21,50] [info] KvWriteActor Shutting down: 0 queued messages to process
+[2018-11-19 03:13:21,50] [info] WriteMetadataActor Shutting down: 0 queued messages to process
+[2018-11-19 03:13:21,50] [info] CallCacheWriteActor stopped
+[2018-11-19 03:13:21,56] [info] JobStoreActor stopped
+[2018-11-19 03:13:21,57] [info] ServiceRegistryActor stopped
+[2018-11-19 03:13:21,64] [info] Database closed
+[2018-11-19 03:13:21,64] [info] Stream materializer shut down
+[2018-11-19 03:13:21,80] [info] Automatic shutdown of the async connection
+[2018-11-19 03:13:21,80] [info] Gracefully shutdown sentry threads.
+[2018-11-19 03:13:22,44] [info] Shutdown finished.
+
+real	276m1.674s
+user	12m6.269s
+sys	0m42.976s
+kroot@t:/media/volume/g-snps-indels\[root@t g-snps-indels]# [K[root@t g-snps-indels]# exit
+
+Script done on Mon Nov 19 10:02:31 2018
