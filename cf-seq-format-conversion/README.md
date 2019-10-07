@@ -59,11 +59,11 @@ Tips: To excute your workflow, you always need to run:
 sudo time java -jar cromwell-36(or other version).jar run /absolute-path/xxx.wdl -i /absolute-path/xxx.json   
 ```
 For gatk4-data-processing: 
-````bash
+```bash
 sudo time java -jar cromwell-36(or other version).jar run /absolute-path/processing-for-variant-discovery-gatk4.wdl -i /absolute-path/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.NA12878(or NA12891, NA12892).json   
 ```
 For gatk4-haplotypecaller:
-````bash
+```bash
 sudo time java -jar cromwell-36(or other version).jar run /absolute-path/haplotypecaller-gvcf-gatk4.wdl -i /absolute-path/haplotypecaller-gvcf-gatk4.hg38.wgs.inputs.NA12878(or NA12891, NA12892).json   
 ```
 ### 8. Expected result.   
