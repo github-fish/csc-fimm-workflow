@@ -55,7 +55,7 @@ sudo systemctl restart docker
 sudo time java -jar cromwell-36.jar run ./seq-format-conversion/paired-fastq-to-unmapped-bam.wdl -i ./seq-format-conversion/paired-fastq-to-unmapped-bam.inputs.json # "time" is optional for monitoring.
 ```
 Tips: To excute your workflow, you always need to run:
-````bash
+```bash
 sudo time java -jar cromwell-36(or other version).jar run /absolute-path/xxx.wdl -i /absolute-path/xxx.json   
 ```
 For gatk4-data-processing: 
